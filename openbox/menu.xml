@@ -79,7 +79,7 @@
 			</item>
 			<item label="Visualizer">
 				<action name="Execute">
-					<execute>alacritty -e 'ncmpcpp -s visualizer'</execute>
+					<execute>alacritty --config-file ~/.config/alacritty/fullscreen.yml -e visualizer</execute>
 				</action>
 			</item>
 		</menu>
