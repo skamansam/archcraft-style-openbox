@@ -218,7 +218,15 @@ other_stuff() {
 	sed -i -e "s/progressbar_color = .*/progressbar_color = \"$1\"/g" "$HOME"/.ncmpcpp/config
 }
 
+# notify ---------------------------------
+notify_user () {
+	local style=`basename $0` 
+	dunstify -u normal --replace=699 -i /usr/share/icons/Archcraft/actions/24/channelmixer.svg "Applying Style : ${style%.*}"
+}
+
 ## Execute Script -----------------------
+notify_user
+
 set_wall 'bg_1.jpg'																		# WALLPAPER
 
 change_bar 'forest' 'Terminus:Medium:size=9;2' && "$polybar_path"/launch.sh				# STYLE | FONT
