@@ -16,7 +16,7 @@ set_wall() {
 # polybar ---------------------------------
 change_bar() {
 	sed -i -e "s/STYLE=.*/STYLE=\"$1\"/g" "$polybar_path"/launch.sh
-	sed -i -e "s/font-0 = .*/font-0 = \"$2\"/g" "$polybar_path"/default/config.ini
+	sed -i -e "s/font-0 = .*/font-0 = \"$2\"/g" "$polybar_path"/"$1"/config.ini
 }
 
 # rofi ---------------------------------
@@ -25,7 +25,7 @@ change_rofi() {
 	sed -i -e "s/DIR=.*/DIR=\"$1\"/g" "$rofi_path"/bin/launcher "$rofi_path"/bin/powermenu
 	sed -i -e 's/STYLE=.*/STYLE="launcher"/g' "$rofi_path"/bin/launcher
 	sed -i -e 's/STYLE=.*/STYLE="powermenu"/g' "$rofi_path"/bin/powermenu
-	sed -i -e "s/font:.*/font:				 	\"$2\";/g" "$rofi_path"/default/font.rasi
+	sed -i -e "s/font:.*/font:				 	\"$2\";/g" "$rofi_path"/"$1"/font.rasi
 
 	sed -i -e "s/font:.*/font:				 	\"$2\";/g" "$rofi_path"/dialogs/askpass.rasi "$rofi_path"/dialogs/confirm.rasi
 	sed -i -e "s/border:.*/border:					$3;/g" "$rofi_path"/dialogs/askpass.rasi "$rofi_path"/dialogs/confirm.rasi
@@ -229,25 +229,25 @@ notify_user
 
 set_wall 'bg_1.jpg'																		# WALLPAPER
 
-change_bar 'forest' 'Terminus:Medium:size=9;2' && "$polybar_path"/launch.sh				# STYLE | FONT
+change_bar 'forest' 'Iosevka Nerd Font:size=10;3' && "$polybar_path"/launch.sh			# STYLE | FONT
 
 ## Change colors in funct (ROFI)
-change_rofi 'forest' 'Terminus Medium 9' '0px' 'Papirus-Apps'							# STYLE/DIR | FONT | BORDER | ICON
+change_rofi 'forest' 'Iosevka 10' '0px' 'Papirus-Apps'									# STYLE/DIR | FONT | BORDER | ICON
 
 change_nm 'forest'																		# CONFIG FILE DIR
 
 ## Change colors in funct (TERMINAL)
-change_term 'Terminus' '9'																# FONT | SIZE
+change_term 'Iosevka Custom' '9'														# FONT | SIZE
 
-change_geany 'forest' 'Terminus Medium 9'												# SCHEME | FONT
+change_geany 'forest' 'Iosevka Custom 10'												# SCHEME | FONT
 
-change_gtk 'Adapta-Nokto-Eta' 'Archcraft-Dark' 'Archcraft-Dark' 'Terminus Medium 9'		# THEME | ICON | CURSOR | FONT
+change_gtk 'Adapta-Nokto' 'Archcraft-Dark' 'Arc-Cursor-Cyan' 'Noto Sans 9'				# THEME | ICON | CURSOR | FONT
 
 ## Change margin in funct (OPENBOX)
-obconfig 'Adapta-Nokto' 'CLM' 'Terminus' '9' && openbox --reconfigure					# THEME | LAYOUT | FONT |SIZE
+obconfig 'Adapta-Nokto' 'CLM' 'Noto Sans' '9' && openbox --reconfigure					# THEME | LAYOUT | FONT |SIZE
 
 ## Change colors in funct (DUNST)
-change_dunst '250x50-10+38' 'Terminus Medium 9' '0'										# GEOMETRY | FONT | BORDER
+change_dunst '250x50-10+40' 'Iosevka Custom 9' '0'										# GEOMETRY | FONT | BORDER
 
 ## Paste settings in funct (PLANK)
 change_dock && cat "$HOME"/.cache/plank.conf | dconf load /net/launchpad/plank/docks/

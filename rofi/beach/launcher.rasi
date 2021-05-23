@@ -8,6 +8,8 @@ configuration {
     fullscreen:                     false;
 	hide-scrollbar: 				true;
 	sidebar-mode: 					false;
+    location:                       7;
+    anchor:                         7;
 }
 
 @import "font.rasi"
@@ -19,10 +21,8 @@ window {
     text-color:                     @FG;
     border-radius:                  0px;
     width:                          500px;
-    location:                       center;
-    anchor:                         center;
-    x-offset:                       0;
-    y-offset:                       0;
+    x-offset:                       25px;
+    y-offset:                       -55px;
 }
 
 prompt {
@@ -37,8 +37,8 @@ textbox-prompt-colon {
 	str: 							"";
     background-color:               @BG;
     text-color:                     @IMG;
-    padding:                        4px 0px 0px 8px;
-	font:							"feather 8";
+    padding:                        6px 0px 0px 8px;
+	font:							"feather 9";
 }
 
 inputbar {
@@ -76,7 +76,7 @@ case-indicator {
 listview {
     background-color:               @BG;
     columns:                        2;
-    lines:							10;
+    lines:							12;
     spacing:                        4px;
     cycle:                          false;
     dynamic:                        true;

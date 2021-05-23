@@ -22,7 +22,7 @@ window {
     border-radius:                  0px;
     width:                          250px;
     x-offset:                       -15;
-    y-offset:                       43;
+    y-offset:                       45;
 }
 
 prompt {
@@ -37,7 +37,7 @@ textbox-prompt-colon {
 	str: 							"";
     background-color:               @BG;
     text-color:                     @IMG;
-    padding:                        2px 0px 0px 8px;
+    padding:                        6px 0px 0px 8px;
 	font:							"feather 10";
 }
 

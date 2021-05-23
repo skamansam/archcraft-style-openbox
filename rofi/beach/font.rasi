@@ -1,5 +1,5 @@
 /* Text Font */
 
 * {
-    font:				 	"Terminus 9";
+    font:				 	"Iosevka 10";
 }

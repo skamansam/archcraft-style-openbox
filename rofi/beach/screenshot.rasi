@@ -37,8 +37,8 @@ textbox-prompt-colon {
 	str: 							"";
     background-color:               @BG;
     text-color:                     @IMG;
-    padding:                        4px 0px 0px 8px;
-	font:							"feather 8";
+    padding:                        6px 0px 0px 8px;
+	font:							"feather 9";
 }
 
 inputbar {

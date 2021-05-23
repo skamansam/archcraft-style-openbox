@@ -37,7 +37,7 @@ textbox-prompt-colon {
 	str: 							"";
     background-color:               @BG;
     text-color:                     @IMG;
-    padding:                        2px 0px 0px 8px;
+    padding:                        6px 0px 0px 8px;
 	font:							"feather 10";
 }
 
